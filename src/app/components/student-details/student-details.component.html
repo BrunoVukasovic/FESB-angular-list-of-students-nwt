@@ -1,3 +1,13 @@
-<p>
-  student-details works!
-</p>
+<div class="card" *ngIf="!!student">
+  <div class="card-body">
+    <h5 class="card-title">{{ student?.fullName }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ student.email }}</h6>
+    <p class="card-text">
+      Datum rođenja je: {{ student.birthdate | date: 'dd/MM/yyyy' }}.
+    </p>
+    <a [routerLink]="'/students'" class="card-link">Nazad</a>
+  </div>
+</div>
+
+<div class="ne-postoji" *ngIf="!student"><p>Student ne postoji</p></div>
+<a [routerLink]="'/students'" class="card-link">Nazad</a>
