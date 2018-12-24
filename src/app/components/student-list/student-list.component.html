@@ -1,0 +1,20 @@
+<div class="border border-bottom-0">
+  <div class="bg-secondary d-flex p-3 text-center text-light">
+    <div class="col-1">#</div>
+    <div class="col-2">Student</div>
+    <div class="col-3">Birthdate</div>
+    <div class="col-4">Faculty</div>
+  </div>
+
+  <div class="tbody">
+    <app-student-row
+      class="d-flex p-3 student-row text-center border-bottom student-row"
+      *ngFor="let student of students; let i = index"
+      [ngClass]="{ active: !!student.marked }"
+      [student]="student"
+      [index]="i"
+      (click)="viewStudent(student.id)"
+    ></app-student-row>
+
+    </div>
+  </div>

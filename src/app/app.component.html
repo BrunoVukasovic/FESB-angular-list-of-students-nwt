@@ -1,30 +1,6 @@
 <div class="container">
   <div class="content">
-    <div>
       <h1>{{ title}}</h1>
-    </div>
-
-    <table class = "table table-hover">
-      <thead>
-        <tr>
-          <th scope = "col">#</th>
-          <th scope = "col">Fullname</th>
-          <th scope = "col">Birthday</th>
-          <th scope = "col">Faculty</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr class = "student-row"
-        *ngFor="let student of students; let i=index; "
-        >
-          <th scope = "row">{{ i+1 }}</th>
-          <td> {{ student.fullName }}</td>
-          <td>{{ student.birthdate }}</td>
-          <td>{{ student.faculty }}</td>
-        </tr>
-      </tbody>
-    </table>
-
+      <router-outlet></router-outlet>
   </div>
 </div>
