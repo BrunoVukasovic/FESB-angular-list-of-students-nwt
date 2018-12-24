@@ -5,8 +5,11 @@ import { Component, OnInit, Input } from '@angular/core';
   template: `
     <div class = "col-1"> {{index + 1}}</div>
     <div class = "col-2">{{ student.fullName }}</div>
-    <div class = "col-3">{{ student.lastName }}</div>
+    <div class = "col-3">{{ student.brithdate | date: 'dd.MM.yyyy' }}</div>
     <div class = "col-4"> {{ student.faculty }}</div>
+    <div class="col-4 col-sm-3 col-md-2">
+    <button type="button" class="btn btn-outline-primary">View</button>
+  </div>
   `,
   styleUrls: ['./student-row.component.css']
 })

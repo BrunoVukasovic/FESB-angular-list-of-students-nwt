@@ -9,7 +9,7 @@
   <div class="tbody">
     <app-student-row
       class="d-flex p-3 student-row text-center border-bottom student-row"
-      *ngFor="let student of students; let i = index"
+      *ngFor="let student of (students | async); let i = index"
       [ngClass]="{ active: !!student.marked }"
       [student]="student"
       [index]="i"
